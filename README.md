@@ -9,4 +9,4 @@ Minecraft APIs made by IT Kids
 
 [<img src="./kadai2.png" width="400">](./kadai2.png)
 
-[<img src="./api_01_JA_jojonyanko/images/kaidan.png" width="400">](./api_01_JA_jojonyanko/images/kaidan.PNG)
+[<img src="./api_01_JA_jojonyanko/images/kaidann.PNG" width="400">](./api_01_JA_jojonyanko/images/kaidann.PNG)
