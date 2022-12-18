@@ -47,15 +47,17 @@ def make_outkaidan(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):
     for j in range(5):
         use_x=x 
         use_z=z
-        for i in range(10):
-            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
-            use_y += 1
-            use_z -= 4
+        # for i in range(10):
+        #     mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
+        #     use_y += 1
+        #     use_z -= 4
+        make_outkaidan_UP(mc,use_x,use_y,use_z,blocktipe_outkaidan)
 
-        for i in range(10):
-            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
-            use_y += 1
-            use_x -= 5
+        # for i in range(10):
+        #     mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
+        #     use_y += 1
+        #     use_x -= 5
+        make_outkaidan_right(mc,use_x,use_y,use_z,blocktipe_outkaidan)
 
 def make_insidekaidan_seihoukei_zyouhen(mc,x= -3,y=1,z= -3,dansu=6,insideblock_seihoukei_zyouhen=param.SEA_LANTERN_BLOCK):
     blocktipe_insideblock_seihoukei_zyouhen = insideblock_seihoukei_zyouhen
