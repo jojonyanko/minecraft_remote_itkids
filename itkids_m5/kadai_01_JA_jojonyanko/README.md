@@ -30,3 +30,12 @@ python hello.py
 python axis_flat.py
 python kadai_01.py
 ```
+[<img src="./1.PNG" width="400">](./1.PNG)
+[<img src="./2.PNG" width="400">](./2.PNG)
+[<img src="./3.PNG" width="400">](./3.PNG)
+[<img src="./4.PNG" width="400">](./4.PNG)
+[<img src="./5.PNG" width="400">](./5.PNG)
+[<img src="./6.PNG" width="400">](./6.PNG)
+[<img src="./7-1.PNG" width="400">](./7-1.PNG)
+[<img src="./7-2.PNG" width="400">](./7-2.PNG)
+[<img src="./8.PNG" width="400">](./8.PNG)
