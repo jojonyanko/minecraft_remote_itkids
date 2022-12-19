@@ -13,10 +13,10 @@ mc.postToChat("こんにちは！")
 
 mc.player.setPos(0, 1, 0)
 
-# mc.setBlocks(-50,1,-50,50,111,50,param.GLASS)
+mc.setBlocks(-50,1,-50,50,111,50,param.GLASS)
 
 
-# mc.setBlocks(-49,0,-49,49,200,49,param.AIR)
+mc.setBlocks(-49,0,-49,49,200,49,param.AIR)
 
 
 make_kansito.make_honto(mc)
@@ -37,7 +37,7 @@ make_kansito.make_kaidow(mc)
 # #         y += 1
 # #         x -= 5
 
-make_kaidan.make_outkaidan(mc)
+make_kaidan.make_outkaidan_NE(mc)
 
 mc.setBlocks(-3,2,-3,3,100,3,param.AIR)
 mc.setBlocks(-2,100,-2,2,101,2,param.AIR)
