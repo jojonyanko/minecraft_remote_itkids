@@ -37,7 +37,9 @@ make_kansito.make_kaidow(mc)
 # #         y += 1
 # #         x -= 5
 
-make_kaidan.make_outkaidan_NE(mc)
+make_kaidan.make_outkaidan_ES(mc)
+make_kaidan.make_outkaidan_SW(mc,outkaidanblock=param.AIR)
+make_kaidan.make_outkaidan_SW(mc)
 
 mc.setBlocks(-3,2,-3,3,100,3,param.AIR)
 mc.setBlocks(-2,100,-2,2,101,2,param.AIR)

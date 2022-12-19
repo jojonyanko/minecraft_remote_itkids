@@ -3,7 +3,7 @@ import param_MCJE as param
 
 
 
-def make_outkaidan_NE(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):
+def make_outkaidan_ES(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):
     blocktipe_outkaidan=outkaidanblock
     use_y=y
     for j in range(5):
@@ -18,6 +18,24 @@ def make_outkaidan_NE(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):
             mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
             use_y += 1
             use_x -= 5
+
+def make_outkaidan_SW(mc,x=-3,y=1,z=-45,outkaidanblock=param.GLASS):
+    blocktipe_outkaidan=outkaidanblock
+    use_y=y
+    for j in range(5):
+        use_x=x 
+        use_z=z
+        for i in range(8):
+            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
+            use_y += 1
+            use_x -= 5
+
+        for i in range(8):
+            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
+            use_y += 1
+            use_z += 4
+
+
 
 def make_insidekaidan_seihoukei_zyouhen(mc,x= -3,y=1,z= -3,dansu=6,insideblock_seihoukei_zyouhen=param.SEA_LANTERN_BLOCK):
     blocktipe_insideblock_seihoukei_zyouhen = insideblock_seihoukei_zyouhen
