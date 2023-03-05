@@ -10,27 +10,29 @@ def make_outkaidan_ES(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):
         use_x=x 
         use_z=z
         for i in range(10):
+            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 4,use_z - 3,param.AIR)
             mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
             use_y += 1
             use_z -= 4
 
         for i in range(10):
+            mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,param.AIR)
             mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
             use_y += 1
             use_x -= 5
 
-def make_outkaidan_SW(mc,x=-3,y=1,z=-45,outkaidanblock=param.GLASS):
+def make_outkaidan_SW(mc,x=0,y=0,z=-45,outkaidanblock=param.GLASS):
     blocktipe_outkaidan=outkaidanblock
     use_y=y
     for j in range(5):
         use_x=x 
         use_z=z
-        for i in range(8):
+        for i in range(10):
             mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
             use_y += 1
             use_x -= 5
 
-        for i in range(8):
+        for i in range(10):
             mc.setBlocks(-use_x,use_y,use_z,-(use_x - 4),use_y + 1,use_z - 3,blocktipe_outkaidan)
             use_y += 1
             use_z += 4
