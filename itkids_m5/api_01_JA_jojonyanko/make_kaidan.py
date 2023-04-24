@@ -1,6 +1,7 @@
-from mcje.minecraft import Minecraft
-import param_MCJE as param
-
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
+from mcpi.minecraft import Minecraft
+import param_MCJE1122 as param
 
 
 def make_outkaidan_ES(mc,x=48,y=1,z=-5,outkaidanblock=param.GLASS):

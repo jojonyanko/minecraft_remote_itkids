@@ -1,5 +1,7 @@
-from mcje.minecraft import Minecraft
-import param_MCJE as param
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
+from mcpi.minecraft import Minecraft
+import param_MCJE1122 as param
 
 def make_kannsito(mc, x=28, z=28, y=76, sityuublock=param.GLOWSTONE, kahenblock=param.GLOWSTONE, zyouhenblock=param.GLOWSTONE ):
 

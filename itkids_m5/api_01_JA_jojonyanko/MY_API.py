@@ -7,6 +7,8 @@ from time import sleep
 
 mc = Minecraft.create(port=param.PORT_MC)
 
+mc.postToChat("zで進める")
+
 mc.player.setPos(0,-51,0)
 story = 0
 say = False

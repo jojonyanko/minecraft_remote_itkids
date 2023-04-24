@@ -1,5 +1,7 @@
-from mcje.minecraft import Minecraft
-import param_MCJE as param
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
+from mcpi.minecraft import Minecraft
+import param_MCJE1122 as param
 import make_kaidan
 
 def make_insidekaidan_S(mc,x=-3,y=1,z=-3,dansu=6,insideblock=param.SEA_LANTERN_BLOCK):
