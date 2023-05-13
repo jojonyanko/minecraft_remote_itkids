@@ -4,8 +4,8 @@ import keyboard
 
 mc = Minecraft.create(port=param.PORT_MC)
 
-def Story(mc,story):
-    while keyboard.is_pressed("z") == False:
-        while keyboard.is_pressed("z"):
-            break
-    mc.postToChat(story)
+def Story(story):
+        while keyboard.is_pressed("z") == False:
+            while keyboard.is_pressed("z"):
+                mc.postToChat(story)
+                break
