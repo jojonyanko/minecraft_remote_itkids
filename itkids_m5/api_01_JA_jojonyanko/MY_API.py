@@ -12,7 +12,7 @@ language = 0
 
 make_story.Story(mc,"Hello")
 make_story.Story(mc,"Which is your language Japanese or English? If it is Japanese, please push J. If it is English, please push E")
-while keyboard.is_pressed:
+while keyboard.is_pressed == False:
     if keyboard.is_pressed("j"):
         language = 1
     if keyboard.is_pressed("e"):

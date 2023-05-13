@@ -7,5 +7,5 @@ mc = Minecraft.create(port=param.PORT_MC)
 def Story(mc,story):
     while keyboard.is_pressed("z") == False:
         while keyboard.is_pressed("z"):
-            mc.postToChat(story)
             break
+    mc.postToChat(story)
