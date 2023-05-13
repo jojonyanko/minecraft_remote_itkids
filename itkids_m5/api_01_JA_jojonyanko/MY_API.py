@@ -15,7 +15,13 @@ make_story.Story(mc,"Which is your language Japanese or English? If it is Japane
 while keyboard.is_pressed:
     if keyboard.is_pressed("j"):
         language = 1
-        mc.postToChat("へぇ、日本人だったのか")
     if keyboard.is_pressed("e"):
         language = 0
         mc.postToChat("Oh, you use at English right? I see.")
+if language == 1:
+    mc.postToChat("へぇ、日本人だったのか")
+
+elif language == 0:
+    mc.postToChat("Oh, you use at English right? I see.")
+    make_story.Story("VIP")
+
