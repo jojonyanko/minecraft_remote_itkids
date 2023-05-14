@@ -4,6 +4,7 @@ import make_story
 import keyboard
 import make_all
 import time
+import mcpi.entity as entity
 
 mc = Minecraft.create(port=param.PORT_MC)
 
@@ -32,7 +33,7 @@ while True:
     if(y < 100):
         if(-12 < x < 12 and -12 < z < 12):
             mc.setBlocks(-10,int(y),-10,10,int(y)+10,10,0)
-            mc.spawnEntity(0,int(y)+1,0,64)
+            mc.spawnEntity(0,int(y)+2,0,entity.WITHER)
             mc.postToChat("thief:Oh no, you are found by this tower's monster. Let's leave this point.")
             mc.setBlock(-100,50,-100,8)
             time.sleep(5)
