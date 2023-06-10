@@ -11,4 +11,12 @@ def Story(story):
                 mc.postToChat(story)
                 time.sleep(1)
                 break
-                
+
+def Storys(storys=[]):
+     story=0
+     while story != len(storys):
+          if keyboard.is_pressed("z"):
+               mc.postToChat(storys[story])
+               story += 1
+               while keyboard.is_pressed("z"):
+                    True
