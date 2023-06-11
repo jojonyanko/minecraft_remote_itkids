@@ -1,8 +1,7 @@
 from mcje.minecraft import Minecraft
 import param_MCJE1122 as param
-import mcpi.entity as entity
+import mcje.entity as entity
 import make_story
-import keyboard
 import make_all
 import time
 
