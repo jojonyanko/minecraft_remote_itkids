@@ -1,6 +1,6 @@
-from mcje.minecraft import Minecraft
+from mcpi.minecraft import Minecraft
 import param_MCJE1122 as param
-import mcje.entity as entity
+
 import make_story
 import make_all
 import time
@@ -27,7 +27,6 @@ while True:
     if(y < 100):
         if(-12 < x < 12 and -12 < z < 12):
             mc.setBlocks(-10,int(y),-10,10,int(y)+10,10,0)
-            time.sleep(2)
-            for i in range(1,10):
-                mc.spawnEntity(0,int(y),0,entity.BLAZE)
-            mc.postToChat("thief:Oh no, you are found by this tower's monster!!")
+            x,y,z = int(x),int(y),int(z)
+            make_all.make_tsuisekidan(x,y+10,y)
+        

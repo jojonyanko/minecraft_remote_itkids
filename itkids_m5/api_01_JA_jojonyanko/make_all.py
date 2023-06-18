@@ -7,6 +7,7 @@ import param_MCJE1122 as param
 import make_kansito 
 import make_kaidan
 import make_insidekaidan
+import time
 
 mc = Minecraft.create(port=param.PORT_MC)
 def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_outkaidan,make_kansitow,make_box):
@@ -35,3 +36,29 @@ def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_o
         make_kansito.make_kannsito(mc, x=28, z=28)
         make_kansito.make_kannsito(mc, x= 28, z= -15)
         make_kansito.make_kannsito(mc, x= -15, z= 28)
+
+def make_tsuisekidan(dan_x,dan_y,dan_z):
+    mc.setBlock(dan_x,dan_y,dan_z,46,0)
+    x,y,z = mc.player.getPos()
+    while dan_x != x and dan_y != y and dan_z != z:
+        mc.setBlock(dan_x,dan_y,dan_z,0)
+        if x > dan_x:
+            dan_x += 1
+        elif x < dan_x:
+            dan_x -= 1
+        else:
+            dan_x = dan_x
+        if y > dan_y:
+            dan_y += 1
+        elif y < dan_y:
+            dan_y -= 1
+        else:
+            dan_y = dan_y
+        if z > dan_z:
+            dan_z += 1
+        elif z < dan_z:
+            dan_z -= 1
+        else:
+            dan_x = dan_x
+        mc.setBlock(dan_x,dan_y,dan_z,46,0)
+        time.sleep(0.5)
