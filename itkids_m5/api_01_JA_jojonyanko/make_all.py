@@ -14,7 +14,7 @@ def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_o
     if make_naraku == True:
         if make_box == True:
             mc.setBlocks(-50,1,-50,50,111,50,param.GLASS)    
-        mc.setBlocks(-49,0,-49,49,300,49,param.AIR)
+        mc.setBlocks(-49,-100,-49,49,300,49,param.AIR)
     if make_hontow == True:
         make_kansito.make_honto(mc)
         if make_kaidow == True:
