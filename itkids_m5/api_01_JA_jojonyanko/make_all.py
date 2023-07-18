@@ -62,3 +62,12 @@ def make_tsuisekidan(dan_x,dan_y,dan_z):
             dan_x = dan_x
         mc.setBlock(dan_x,dan_y,dan_z,46,0)
         time.sleep(0.5)
+
+def make_BOSS_Head(x=0,y=5,z=0):
+    mc.setBlocks(x-4,y-4,z-4,x+4,y+4,z+4,35,0)#四角
+    mc.setBlocks(x-3,y-4,z-5,x+3,y+4,z+5,35,0)#前
+    mc.setBlocks(x-5,y-4,z-3,x+5,y+4,z+3,35,0)#横
+    mc.setBlocks(x-5,y-3,z-3,x+5,y+3,z+3,35,0)#前
+    mc.setBlocks(x-3,y-3,z-5,x+3,y+3,z+5,35,0)#横
+    mc.setBlocks(x-3,y-3,z-3,x+3,y+3,z+3,42)#中心核
+    mc.setBlock(x,y,z,param.TNT,1)
