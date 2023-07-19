@@ -10,32 +10,40 @@ import make_insidekaidan
 import time
 
 mc = Minecraft.create(port=param.PORT_MC)
-def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_outkaidan,make_kansitow,make_box):
+def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_outkaidan,make_kansitow,make_box,
+             Hontow_date=[10,100,10,param.GOLD_BLOCK],Utikaidann_date=[3,1,3,100,6,param.SEA_LANTERN_BLOCK],
+             Kaidow_date=[49,1,4,20,param.GLASS],OutKaidan_date=[[48,4],1,[5,45,8,48],param.GLASS],
+             Kanshitow_date=[[16,28,28,15],76,[16,28,15,28],["Shityu",param.GLOWSTONE,"Kahen",param.GLOWSTONE,"Zyouhen",param.GLOWSTONE]],
+             Naraku_date=[49,100,49,300]):
     if make_naraku == True:
         if make_box == True:
-            mc.setBlocks(-50,1,-50,50,111,50,param.GLASS)    
-        mc.setBlocks(-49,-100,-49,49,300,49,param.AIR)
+            mc.setBlocks(x-50,y+1,z-50,x+50,y+111,z+50,param.GLASS)    
+        mc.setBlocks(x-Naraku_date[0],y-Naraku_date[1],z-Naraku_date[2],x+Naraku_date[0],y+Naraku_date[3],z+Naraku_date[2],param.AIR)
     if make_hontow == True:
-        make_kansito.make_honto(mc)
+        make_kansito.make_honto(mc,x+Hontow_date[0],y+Hontow_date[1],z+Hontow_date[2],Hontow_date[3])
         if make_kaidow == True:
-            make_kansito.make_kaidow(mc)
+            make_kansito.make_kaidow(mc,x+Kaidow_date[0],y+Kaidow_date[1],z+Kaidow_date[2],y_plas=Kaidow_date[3],kaidowblock=Kaidow_date[4])
             if make_outkaidan ==True:
-                make_kaidan.make_outkaidan_ES(mc)
-                make_kaidan.make_outkaidan_SW(mc)
-                make_kaidan.make_outkaidan_WN(mc)
-                make_kaidan.make_outkaidan_NE(mc)
+                make_kaidan.make_outkaidan_ES(mc,x+OutKaidan_date[0][0],y+OutKaidan_date[1],z-OutKaidan_date[2][0])
+                make_kaidan.make_outkaidan_SW(mc,x-OutKaidan_date[0][1],y+OutKaidan_date[1],z-OutKaidan_date[2][1])
+                make_kaidan.make_outkaidan_WN(mc,x+OutKaidan_date[0][0],y+OutKaidan_date[1],z+OutKaidan_date[2][2])
+                make_kaidan.make_outkaidan_NE(mc,x-OutKaidan_date[0][1],y+OutKaidan_date[1],z+OutKaidan_date[2][3])
             if make_utikaidann == True:
-                mc.setBlocks(-3,2,-3,3,100,3,param.AIR)
-                mc.setBlocks(-2,100,-2,2,101,2,param.AIR)
-                make_insidekaidan.make_insidekaidan_S(mc,)
-                make_insidekaidan.make_insidekaidan_E(mc,)
-                make_insidekaidan.make_insidekaidan_N(mc,)
-                make_insidekaidan.make_insidekaidan_W(mc,)
-    if make_kansito == True:
-        make_kansito.make_kannsito(mc, x= -16, z= -16)
-        make_kansito.make_kannsito(mc, x=28, z=28)
-        make_kansito.make_kannsito(mc, x= 28, z= -15)
-        make_kansito.make_kannsito(mc, x= -15, z= 28)
+                mc.setBlocks(x-Utikaidann_date[0],y+(Utikaidann_date[1]+1),z-Utikaidann_date[2],x+Utikaidann_date[0],y+Utikaidann_date[3],z+Utikaidann_date[2],param.AIR)
+                mc.setBlocks(x-(Utikaidann_date[0]-1),y+Utikaidann_date[3],z-(Utikaidann_date[2]-1),x+(Utikaidann_date[0]-1),y+(Utikaidann_date[3]+1),z+(Utikaidann_date[2]-1),param.AIR)
+                make_insidekaidan.make_insidekaidan_S(mc,x-Utikaidann_date[0],y+Utikaidann_date[1],z-Utikaidann_date[2],Utikaidann_date[4],Utikaidann_date[5])
+                make_insidekaidan.make_insidekaidan_E(mc,x+Utikaidann_date[0],y+Utikaidann_date[1],z-Utikaidann_date[2],Utikaidann_date[4],Utikaidann_date[5])
+                make_insidekaidan.make_insidekaidan_N(mc,x+Utikaidann_date[0],y+Utikaidann_date[1],z+Utikaidann_date[2],Utikaidann_date[4],Utikaidann_date[5])
+                make_insidekaidan.make_insidekaidan_W(mc,x-Utikaidann_date[0],y+Utikaidann_date[1],z+Utikaidann_date[2],Utikaidann_date[4],Utikaidann_date[5])
+    if make_kansitow == True:
+        make_kansito.make_kannsito(mc, x-Kanshitow_date[0][0], z-Kanshitow_date[2][0],y=Kanshitow_date[1],
+                                   sityuublock=Kanshitow_date[3][1],kahenblock=Kanshitow_date[3][3],zyouhenblock=Kanshitow_date[3][5])
+        make_kansito.make_kannsito(mc, x+Kanshitow_date[0][1], z+Kanshitow_date[2][1], y=Kanshitow_date[1],
+                                sityuublock=Kanshitow_date[3][1],kahenblock=Kanshitow_date[3][3],zyouhenblock=Kanshitow_date[3][5])
+        make_kansito.make_kannsito(mc, x+Kanshitow_date[0][2], z-Kanshitow_date[2][2], y=Kanshitow_date[1],
+                                sityuublock=Kanshitow_date[3][1],kahenblock=Kanshitow_date[3][3],zyouhenblock=Kanshitow_date[3][5])
+        make_kansito.make_kannsito(mc, x-Kanshitow_date[0][3], z+Kanshitow_date[2][3], y=Kanshitow_date[1],
+                                sityuublock=Kanshitow_date[3][1],kahenblock=Kanshitow_date[3][3],zyouhenblock=Kanshitow_date[3][5])
 
 def make_tsuisekidan(dan_x,dan_y,dan_z):
     mc.setBlock(dan_x,dan_y,dan_z,46,0)
@@ -71,3 +79,7 @@ def make_BOSS_Head(x=0,y=5,z=0):
     mc.setBlocks(x-3,y-3,z-5,x+3,y+3,z+5,35,0)#横
     mc.setBlocks(x-3,y-3,z-3,x+3,y+3,z+3,42)#中心核
     mc.setBlock(x,y,z,param.TNT,1)
+
+mc.setBlocks(-500,0,-500,200,500,500,0)
+make_BOSS_Head(-50,0,-50)
+# make_ALL(mc,-50,0,0,True,True,True,True,True,True,True)
