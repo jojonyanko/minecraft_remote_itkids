@@ -86,7 +86,7 @@
     `Hontow_date=[10,100,10,param.GOLD_BLOCK]`,`Utikaidan_date=[3,1,3,100,6,param.SEA_LANTERN_BLOCK]`,
     `Kaidow_date=[49,1,4,20,param.GLASS]`,`Outkaidan_date=[[48,4],1,[5,45,8,48],param.GLASS]`,
     `Kanshitow_date=[[16,28,28,15],76,[16,28,15,28],["Shityu",param.GLOWSTONE,"Kahen",param.GLOWSTONE,"Zyouhen",param.GLOWSTONE]]`,
-    `Naraku_date=[49,100,49,300]`などなどといろいろなものがありますが、`x`,`y`,`z`はもちろんその建造物の座標を表しており、`make_hontow`~`make_box`まではその建造物を立てるかどうかを`True`と`False`で区別しています。`Hontow_date`~`Naraku_date`まではそれらの建造物のある程度の細かな設定を行うことが出来ますが、一つ一つ説明していると長くなりすぎてしまうので、make_allのコードなどを読んでどこがどこだかを自分で判断してください（つまり上級者向けです）
+    `Naraku_date=[49,100,49,300]`などなどといろいろなものがありますが、`x`,`y`,`z`はもちろんその建造物の座標を表しており、`make_hontow`～`make_box`まではその建造物を立てるかどうかを`True`と`False`で区別しています。`Hontow_date`～`Naraku_date`まではそれらの建造物のある程度の細かな設定を行うことが出来ますが、一つ一つ説明していると長くなりすぎてしまうので、make_allのコードなどを読んでどこがどこだかを自分で判断してください（つまり上級者向けです）
 
     使用例：
     ~~~Python
