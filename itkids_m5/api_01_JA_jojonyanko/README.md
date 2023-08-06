@@ -68,13 +68,13 @@
     import param_MCJE1122 as param
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_story
-    ~~~
 
     make_story.storys(["チィース！","サイナラ～！"])
     #　↑　ｚキーを2回押すとMinecraftのチャットで最初に「チィース！」、二回目に「サイナラ～！」と出てくる
 
     make_story.storys(["ゴッツァンです！","もう一杯ようどすか！？","あいざいました！"],botton="a")
     #　↑　Aキーを2回押すと、Minecraftのチャットで最初に「ゴッツァンです！」、二回目に「もう一杯ようどすか！？」、三回目に「あいざいました！」と出てくる
+    ~~~
 
 ### 2. 謎の施設
 
