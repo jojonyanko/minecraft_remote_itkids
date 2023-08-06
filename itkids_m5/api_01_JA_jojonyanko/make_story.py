@@ -5,20 +5,20 @@ import time
 
 mc = Minecraft.create(port=param.PORT_MC)
 
-def Story(story):
+def Story(story,botton="z"):
         while True:
-            if keyboard.is_pressed("z"):
+            if keyboard.is_pressed(botton):
                 mc.postToChat(story)
                 time.sleep(1)
                 break
 
-def Storys(storys=[]):
+def Storys(storys=[],botton="z"):
      story=0
      while story != len(storys):
-          if keyboard.is_pressed("z"):
+          if keyboard.is_pressed(botton):
                mc.postToChat(storys[story])
                story += 1
-               while keyboard.is_pressed("z"):
+               while keyboard.is_pressed(botton):
                     True
 
 def Charenge_thief(Block_ID=14,Around_Block=False,Around_Block_ID=1,Kanshi=False):
@@ -39,8 +39,8 @@ def Charenge_thief(Block_ID=14,Around_Block=False,Around_Block_ID=1,Kanshi=False
             if mc.getBlock(0,Block_y,0) == 0 and block_was_breaked == True:
                 break
         elif (y < -10):
-            make_story.Storys(["Oh, are you all right?",
-                            "Please respown and try again!!"])
+            Storys(["Oh, are you all right?",
+                    "Please respown and try again!!"])
         if Kanshi == True:
             if(( x and y )or( x and y )or( x and y )or( x and y )):
                 x,y,z = int(x),int(y),int(z)

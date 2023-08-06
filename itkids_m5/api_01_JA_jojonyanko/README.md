@@ -20,4 +20,47 @@
 
 これらのことをやれば、きっと使えるはず
 
-また、本来は僕が作った[MY_REAL_API](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/MY_REAL_API.py)という物がこの作品のメインとなるものだけど、せっかくこのリポジトリをクローンして、君たちもプログラムをここで
+また、本来は僕が作った[MY_REAL_API](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/MY_REAL_API.py)という物がこの作品のメインとなるものだけど、せっかくこのリポジトリをクローンして、君たちもプログラムをここで書くことが出来るので、この作品でできる機能も紹介するよ。
+
+## ストーリー編
+
+## 機能紹介編
+### 1. チャット機能
+[make_story](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_story.py)という部分に追加されており、二つの昨日があります
+
+**注意：Minecraftのバージョンが1.12.2の場合、日本語で書くと文字がバグる可能性があります！！**
+
+- 1.　**story**:
+    
+    ここではMinecraft上のチャットをあるボタンを打った後に打つことが出来ます。storyの後に()がついており、そこに`story`と`botton="z"`というものがあると思いますが、使用する際には`story=`の後に打ちたい内容を入力し、`botton=`の後に使いたいボタンを入れてください（ボタンの名前は半角で）
+    使用例：
+    ~~~Python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_story
+
+    make_story("こんにちは！")
+    #　↑　ｚキーが押された後にMinecraftのチャットで「こんにちは！」と出る
+
+    make_story("さようなら！",botton="a")
+    #　↑　Aキーが押された後にMinecraftのチャットで「さようなら！」と出る
+※別に`botton`の部分は変えなくても自動でZキーが使われるようになっている
+
+- 2.　**storys**:
+
+    **story**では一文しかチャットを打つことが出来なかったが、こちらでは連続して複数個の文をあるボタンを打った後に打つことが出来ます。storysの後に()があり、そこに`storys=[]`と`botton="z"`というものがあると思いますが、使用するときには`storys=[]`の`[]`中に打ちたい文、`botton=`の後に使いたいボタンを入れてください（ボタンの名前は半角で）
+
+    使用例：
+    ~~~Python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_story
+
+    make_story.storys(["チィース！","サイナラ～！"])
+    #　↑　ｚキーを2回押すとMinecraftのチャットで最初に「チィース！」、二回目に「サイナラ～！」と出てくる
+
+    make_story.storys(["ゴッツァンです！","もう一杯ようどすか！？","あいざいました！"],botton="a")
+    #　↑　Aキーを2回押すと、Minecraftのチャットで最初に「ゴッツァンです！」、二回目に「もう一杯ようどすか！？」、三回目に「あいざいました！」と出てくる
+

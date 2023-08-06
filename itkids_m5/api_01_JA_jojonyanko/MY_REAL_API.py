@@ -60,4 +60,4 @@ make_story.Charenge_thief(46,True,46,True)
 
 make_all.make_ALL(mc,0,0,0,True,True,True,False,False,True,False)
 
-Charenge_thief(56,True,56,True)
+make_story.Charenge_thief(56,True,56,True)
