@@ -26,7 +26,7 @@
 
 ## 機能紹介編
 ### 1. チャット機能
-[make_story](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_story.py)という部分に追加されており、二つの昨日があります
+[make_story](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_story.py)という部分に追加されており、二つの機能があります
 
 **注意：Minecraftのバージョンが1.12.2の場合、日本語で書くと文字がバグる可能性があります！！**
 
@@ -40,10 +40,10 @@
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_story
 
-    make_story("こんにちは！")
+    make_story.story("こんにちは！")
     #　↑　ｚキーが押された後にMinecraftのチャットで「こんにちは！」と出る
 
-    make_story("さようなら！",botton="a")
+    make_story.story("さようなら！",botton="a")
     #　↑　Aキーが押された後にMinecraftのチャットで「さようなら！」と出る
 ※別に`botton`の部分は変えなくても自動でZキーが使われるようになっている
 
@@ -63,4 +63,12 @@
 
     make_story.storys(["ゴッツァンです！","もう一杯ようどすか！？","あいざいました！"],botton="a")
     #　↑　Aキーを2回押すと、Minecraftのチャットで最初に「ゴッツァンです！」、二回目に「もう一杯ようどすか！？」、三回目に「あいざいました！」と出てくる
+
+### 2. 謎の施設
+
+[make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py)にざっくりとした物、[make_insidekaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_insidekaidan.py)、[make_kaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kaidan.py)、[make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py)に細かい設定のできるものが追加されています。
+
+- 1.　**make_all**
+
+    ここではこの作品で追加された建造物のすべてを一気に作り出すことが出来る。make_allの後に()があり、その中に`x`,`y`,`z`,`make_hontow`,`make_utikaidan`,`make_naraku`,`make_kaidow`,`make_outkaidan`,`make_kansitow`,`make_box`,`Hontow_date=[10,100,10,param.GOLD_BLOCK]`,`Utikaidan_date=[3,1,3,100,6,param.SEA_LANTERN_BLOCK]`,`Kaidow_date=[49,1,4,20,param.GLASS]`,`Outkaidan_date=[[48,4],1,[5,45,8,48],param.GLASS]`,`Kanshitow_date=[[16,28,28,15],76,[16,28,15,28],["Shityu",param.GLOWSTONE,"Kahen",param.GLOWSTONE,"Zyouhen",param.GLOWSTONE]]`,`Naraku_date=[49,100,49,300]`
 
