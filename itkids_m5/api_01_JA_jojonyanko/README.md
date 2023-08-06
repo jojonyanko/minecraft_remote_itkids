@@ -257,3 +257,33 @@
     make_kansito.make_honto(mc,tyusinblock=param.GLASS)
     #　↑　ガラスに囲まれているブロックがガラス、つまりガラスの本棟を作る
     ~~~
+
+- 7.　**make_kaidow** (in [make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py))
+
+    ここでは街道（ガラスの通路）を作成することが出来ます。make_kaidowの()の中に、`x`,`y`,`z`,`y_plas`,`kaidowblock`の四つがあると思いますが、`x`は街道の長さ、`z`は街道の幅（街道の内側の長さ）、`y`は街道のy座標、`y_plas`は街道を上方向に複製していくときの街道と街道との間の長さ、`kaidowblock`は街道を構成するブロックをコントロールすることが出来ます。
+
+    使用例：
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_kansito
+
+    make_kansito.make_kaidow(mc,)
+    #　↑　初期設定の街道を作成する
+
+    make_kansito.make_kaidow(mc,x=100,z=10)
+    #　↑　-100～100までの長さの、内側の幅が-10～10ある街道を作成する
+
+    make_kansito.make_kaidow(mc,y=10)
+    #　↑　y座標が10のところに初期設定の街道を作成する
+
+    make_kansito.make_kaidow(mc,x_plas=50)
+    #　↑　50ごとの間隔をあけて街道が上に複製されていく
+
+    make_kansito.make_kaidow(mc,x_plas=0)
+    #　↑　街道が一つ（一クロス）作成される
+
+    make_kansito.make_kaidow(mc,kaidowblock=param.GOLD_BLOCK)
+    #　↑　金ブロックで構成されている初期設定の街道ができる
+    ~~~
