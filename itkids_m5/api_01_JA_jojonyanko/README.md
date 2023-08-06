@@ -8,7 +8,13 @@
 ### 1: Minecraftを購入して、MODを入れることが出来るようにする
 - MODを使えるようにする方法
 
-1.Javaをインストールする  2.使いたいMinecraftのバージョンと同じバージョンのForgeをインストールする  3.Forgeをダブルクリックし起動させ、ダウンロードする  4.Minecraftを起動し、
+1. Javaをインストールする  
+2. 使いたいMinecraftのバージョンと同じバージョンのForgeをインストールする  
+3. Forgeをダブルクリックし起動させ、ダウンロードする  
+4. Minecraftを起動し、「起動構成」に進み、「新規作成」を押すとバージョンを選ぶことが出来、その中にForgeと書かれたものがあるので、先ほど入れたForgeと同じバージョンのものを選択して作成する。このとき「ゲームディレクトリ」に空のフォルダ―を選択するとMODのバージョンの違うやつやバニラを遊ぶ時に変更が楽になるのでやった方がよい   
+5. 「プレイ」に戻り、先ほど作った起動構成を選択してMinecraftを立ち上げる。（起動構成は左下から変更することが出来る）  
+6. 起動したら画面に「MOD」または「mod」、「Mod」と書かれたボタンがあるかを確認する。本来ならそのボタンを押して中にForgeがあるかを確認した方が確実なのだが、ボタンさえあれば大体成功しているのでそのままMinecraftを閉じてもよい（もしボタンがなかったら1からやり直す）
+7. 起動構成で選択したゲームディレクトリに指定したフォルダにMODなどのフォルダが追加されていると思うが、そこに入れたいMODを入れる。起動構成は新しく作ってもいいし、先ほど作ったものでもよい（しかしゲームディレクトリは同じものを選択しないといけない。）
 
 - その方法が通用しなかったら
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -91,6 +97,14 @@
 
     make_all.make_ALL(mc,x,y,z,True,True,True,True,True,True,True)
     #　↑　座標0,0,0のところにすべての建造物を作成する
+
+    make_all.make_ALL(mc,x,y,z,True,False,False,False,False,False,False)
+    #　↑　座標0,0,0のところに本棟だけを作成する
+
+    make_all.make_ALL(mc,x+10,y,z+10,True,True,True,True,True,True,True)
+    #　↑　座標10,0,10のところにすべての建造物を作成する
+    ~~~
+    ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうだろうか？
 
 
 
