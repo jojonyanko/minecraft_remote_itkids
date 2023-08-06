@@ -107,7 +107,7 @@
     ~~~
     ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうでしょうか？
 
-- 2 **make_insidekaidan_S/E/N/W**
+- 2 **make_insidekaidan_S/E/N/W** (in [make_insidekaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_insidekaidan.py))
 
     ここでは本棟の中に作成される階段を作ることが出来ます。最後の文字がS,E,N,Wになる四つの種類のものがあり、それぞれ階段の進む方向が違います。S,E,N,Wは方位のsouth,east,north,westの頭文字ではありますが、本当にそうなっているのかはわからない（作っているときに適当な方向を北として作ったから）ので、いったんすべて試してみてから使うとよいと思います。どのmake_insidekaidanの()にも`x`,`y`,`z`,`dansu`,`insideblock`の四つがあると思いますが、`x`,`y`,`z`は建造物の座標を表しており、`dansu`は階段の段数、`insideblock`は階段を構成するブロックの種類をコントロールすることが出来ます
 
