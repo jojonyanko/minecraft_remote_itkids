@@ -16,7 +16,7 @@
 6. 起動したら画面に「MOD」または「mod」、「Mod」と書かれたボタンがあるかを確認する。本来ならそのボタンを押して中にForgeがあるかを確認した方が確実なのだが、ボタンさえあれば大体成功しているのでそのままMinecraftを閉じてもよい（もしボタンがなかったら1からやり直す）
 7. 起動構成で選択したゲームディレクトリに指定したフォルダにMODなどのフォルダが追加されていると思うが、そこに入れたいMODを入れる。起動構成は新しく作ってもいいし、先ほど作ったものでもよい（しかしゲームディレクトリは同じものを選択しないといけない。）
 
-- その方法が通用しなかったら
+- その方法が通用しなかったら  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 2: remotecontrollermodを入手し、MODフォルダにぶち込む
@@ -42,7 +42,7 @@
 
 - 1.　**story**:
     
-    ここではMinecraft上のチャットをあるボタンを打った後に打つことが出来ます。storyの後に()がついており、そこに`story`と`botton="z"`というものがあると思いますが、使用する際には`story=`の後に打ちたい内容を入力し、`botton=`の後に使いたいボタンを入れてください（ボタンの名前は半角で）
+    ここではMinecraft上のチャットをあるボタンを打った後に打つことが出来ます。storyの後に()がついており、そこに`story`と`botton="z"`というものがあると思いますが、使用する際には`story=`の後に打ちたい内容を入力し、`botton=`の後に使いたいボタンを入れてください（ボタンの名前は半角で）  
     使用例：
     ~~~Python
     from mcpi.minecraft import Minecraft
