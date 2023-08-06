@@ -211,3 +211,27 @@
     make_kaidan.make_insidekaidan_seihoukei_hidari(mc,insideblock_seihoukei_hidari=param.GOLD_BLOCK)
     #　↑　初期設定の位置で初期設定の段数分の階段を金ブロックで作成する
     ~~~
+
+- 5.　**make_kannsito** (in [make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py))
+    
+    ここでは監視塔のような建造物を作ることが出来ます。make_kannsitoの()の中には`x`,`z`,`y`,`sityuublock`,`kahenblock`,`zyouhenblock`の五つがあると思いますが、`x`,`z`,はその建造物を作成する座標、`y`は監視塔の高さ、`sityuublock`は監視塔の支柱のような部分を構成するブロック、`kahenblock`は監視塔の人のいそうな部分の下半分を構成するブロック、`zyouhenblock`は監視塔の人のいそうな部分の上半分を構成するブロックをコントロールすることが出来ます。
+
+    使用例：
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_kansito
+
+    make_kansito.make_kannsito(mc,)
+    #　↑　初期設定の監視塔を作成する
+
+    make_kansito.make_kannsito(mc,x=10,z=10)
+    #　↑　座標10,1,10に監視塔を作成する
+
+    make_kansito.make_kannsito(mc,y=100)
+    #　↑　y座標が1から100までの高さの監視塔を作成する
+
+    make_kansito.make_kannsito(mc,sityuublock=param.GOLD_BLOCK,kahenblock=param.SEA_LANTERN_BLOCK,zyouhenblock=param.GLASS)
+    #　↑　初期設定の位置と高さの、支柱のような部分が金ブロックで人がいそうな場所の下半分がシーランタンブロック、上半分がガラスブロックで構成されていいる監視塔を作成する
+    ~~~
