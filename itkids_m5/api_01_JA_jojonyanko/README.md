@@ -105,7 +105,44 @@
     make_all.make_ALL(mc,x+10,y,z+10,True,True,True,True,True,True,True)
     #　↑　座標10,0,10のところにすべての建造物を作成する
     ~~~
-    ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうだろうか？
+    ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうでしょうか？
+
+- 2 **make_insidekaidan_S/E/N/W**
+
+    ここでは本棟の中に作成される階段を作ることが出来ます。最後の文字がS,E,N,Wになる四つの種類のものがあり、それぞれ階段の進む方向が違います。S,E,N,Wは方位のsouth,east,north,westの頭文字ではありますが、本当にそうなっているのかはわからない（作っているときに適当な方向を北として作ったから）ので、いったんすべて試してみてから使うとよいと思います。どのmake_insidekaidanの()にも`x`,`y`,`z`,`dansu`,`insideblock`の四つがあると思いますが、`x`,`y`,`z`は建造物の座標を表しており、`dansu`は階段の段数、`insideblock`は階段を構成するブロックの種類をコントロールすることが出来ます
+
+    使用例：
+    ~~~Python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_insidekaidan
+
+    make_insidekaidan.make_insidekaidan_S(mc)
+    make_insidekaidan.make_insidekaidan_E(mc)
+    make_insidekaidan.make_insidekaidan_N(mc)
+    make_insidekaidan.make_insidekaidan_W(mc)
+    #　↑　階段をそれぞれ初期設定の場所に作成する
+
+    make_insidekaidan.make_insidekaidan_S(mc,x=0,y=0,z=0)
+    make_insidekaidan.make_insidekaidan_E(mc,x=0,y=0,z=0)
+    make_insidekaidan.make_insidekaidan_N(mc,x=0,y=0,z=0)
+    make_insidekaidan.make_insidekaidan_W(mc,x=0,y=0,z=0)
+    #　↑　階段を座標0,0,0のところに作成する
+
+    make_insidekaidan.make_insidekaidan_S(mc,dansu=10)
+    make_insidekaidan.make_insidekaidan_E(mc,dansu=10)
+    make_insidekaidan.make_insidekaidan_N(mc,dansu=10)
+    make_insidekaidan.make_insidekaidan_W(mc,dansu=10)
+    #　↑　階段の段数を10にし、初期設定で示されている場所に生成する
+
+    make_insidekaidan.make_insidekaidan_S(mc,insidekaidan=param.GOLD_BLOCK)
+    make_insidekaidan.make_insidekaidan_E(mc,insidekaidan=param.GOLD_BLOCK)
+    make_insidekaidan.make_insidekaidan_N(mc,insidekaidan=param.GOLD_BLOCK)
+    make_insidekaidan.make_insidekaidan_W(mc,insidekaidan=param.GOLD_BLOCK)
+    #　↑　階段を生成するブロックを金ブロックにし、初期設定で示されている場所に初期設定で示されている段数で生成する。
+    ~~~
+    
 
 
 
