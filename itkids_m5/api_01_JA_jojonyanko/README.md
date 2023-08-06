@@ -122,7 +122,7 @@
     make_insidekaidan.make_insidekaidan_E(mc)
     make_insidekaidan.make_insidekaidan_N(mc)
     make_insidekaidan.make_insidekaidan_W(mc)
-    #　↑　階段をそれぞれ初期設定の場所に作成する
+    #　↑　初期設定の階段をそれぞれ作成する
 
     make_insidekaidan.make_insidekaidan_S(mc,x=0,y=0,z=0)
     make_insidekaidan.make_insidekaidan_E(mc,x=0,y=0,z=0)
@@ -141,6 +141,36 @@
     make_insidekaidan.make_insidekaidan_N(mc,insidekaidan=param.GOLD_BLOCK)
     make_insidekaidan.make_insidekaidan_W(mc,insidekaidan=param.GOLD_BLOCK)
     #　↑　階段を生成するブロックを金ブロックにし、初期設定で示されている場所に初期設定で示されている段数で生成する。
+    ~~~
+
+- 3.　**make_outkaidan_ES/SW/WN/NE** (in [make_kaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kaidan.py))
+
+    ここでは本棟の中の階段ではなく、本棟の外側にあった階段を作ることが出来ます。ここでもES,SW,WN,NEの四つの種類があり、ES,SW,WN,NEは方向のnorth,south,west,eastからきているのですが、やはり方向が正しくない可能性がありますので、こちらも一回すべて試してみた方がよいと思います。どのmake_outkaidanの()にも`x`,`y`,`z`,`outkaidanblock`があると思いますが、`x`,`y`,`z`は階段を作成する座標、`outkaidanblock`は階段を構成するブロックの種類をコントロールすることが出来ます。
+
+    使用例：
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_kaidan
+
+    make_kaidan.make_outkaidan_ES(mc,)
+    make_kaidan.make_outkaidan_SW(mc,)
+    make_kaidan.make_outkaidan_WN(mc,)
+    make_kaidan.make_outkaidan_NE(mc,)
+    #　↑　初期設定の階段をそれぞれ作成する
+
+    make_kaidan.make_outkaidan_ES(mc,x+10,y,z+10)
+    make_kaidan.make_outkaidan_SW(mc,x+10,y,z+10)
+    make_kaidan.make_outkaidan_WN(mc,x+10,y,z+10)
+    make_kaidan.make_outkaidan_NE(mc,x+10,y,z+10)
+    #　↑　座標10,1,10のところに階段を作成する
+
+    make_kaidan.make_outkaidan_ES(mc,outkaidanblock=param.GOLD_BLOCK)
+    make_kaidan.make_outkaidan_SW(mc,outkaidanblock=param.GOLD_BLOCK)
+    make_kaidan.make_outkaidan_WN(mc,outkaidanblock=param.GOLD_BLOCK)
+    make_kaidan.make_outkaidan_NE(mc,outkaidanblock=param.GOLD_BLOCK)
+    #　↑　初期設定の位置に金ブロックで構成された階段を作成する
     ~~~
     
 
