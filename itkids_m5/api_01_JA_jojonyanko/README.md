@@ -173,6 +173,41 @@
     #　↑　初期設定の位置に金ブロックで構成された階段を作成する
     ~~~
     
+- 4.　**make_insidekaidan_seihoukei_zyouhen/migi/kahen/hidari** (in [make_kaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kaidan.py))
 
+    ここでは本棟の中に作成される階段を作ることが出来ます。・・・って同じようなセリフをどこかで聞いたことがありますね？
+    >いや本棟の中の階段はmake_outsidekaidanで作られるんじゃないんかい  
+    
+    などという風に受け取った人も少なからずいると思いますが、こちらでは本棟の中の階段のおり曲がる前までのものを作り出すことが出来ます。こちらにも四っつほどの種類がありますが、もちろんすべて試した後に使った方がよいと思います。どのmake_insidekaidan_seihoukeiの()の中にも`x`,`y`,`z`,`dansu`があると思いますが、`x`,`y`,`z`は階段の作成する座標、`dansu`は階段の段数をコントロールすることが出来ます。また、`insideblock_seihoukei_zyouhen/migi/kahen/hidari`という種類によって違う名前の物があると思いますが、これらの働きはすべて同じで、階段を構成するブロックをコントロールすることが出来ます。
 
+    使用例：
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_kaidan
 
+    make_kaidan.make_insidekaidan_seihoukei_zyouhen(mc,)
+    make_kaidan.make_insidekaidan_seihoukei_migi(mc,)    
+    make_kaidan.make_insidekaidan_seihoukei_kahen(mc,)
+    make_kaidan.make_insidekaidan_seihoukei_hidari(mc,)
+    #　↑　初期設定の階段をそれぞれ作成する
+
+    make_kaidan.make_insidekaidan_seihoukei_zyouhen(mc,x=10,y=0,z=10)
+    make_kaidan.make_insidekaidan_seihoukei_migi(mc,x=10,y=0,z=10)
+    make_kaidan.make_insidekaidan_seihoukei_kahen(mc,x=10,y=0,z=10)
+    make_kaidan.make_insidekaidan_seihoukei_hidari(mc,x=10,y=0,z=10)
+    #　↑　座標10,0,10の所に階段を作成する
+
+    make_kaidan.make_insidekaidan_seihoukei_zyouhen(mc,dansu=10)
+    make_kaidan.make_insidekaidan_seihoukei_migi(mc,dansu=10)    
+    make_kaidan.make_insidekaidan_seihoukei_kahen(mc,dansu=10)
+    make_kaidan.make_insidekaidan_seihoukei_hidari(mc,dansu=10)
+    #　↑　段数が10の階段を初期設定の位置に作成する
+
+    make_kaidan.make_insidekaidan_seihoukei_zyouhen(mc,insideblock_seihoukei_zyouhen=param.GOLD_BLOCK)
+    make_kaidan.make_insidekaidan_seihoukei_migi(mc,insideblock_seihoukei_migi=param.GOLD_BLOCK)
+    make_kaidan.make_insidekaidan_seihoukei_kahen(mc,insideblock_seihoukei_kahen=param.GOLD_BLOCK)
+    make_kaidan.make_insidekaidan_seihoukei_hidari(mc,insideblock_seihoukei_hidari=param.GOLD_BLOCK)
+    #　↑　初期設定の位置で初期設定の段数分の階段を金ブロックで作成する
+    ~~~
