@@ -105,7 +105,7 @@
     make_all.make_ALL(mc,x+10,y,z+10,True,True,True,True,True,True,True)
     #　↑　座標10,0,10のところにすべての建造物を作成する
     ~~~
-    ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうでしょうか？
+    ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうでしょうか？（Xなんてものは知りません）
 
 - 2 **make_insidekaidan_S/E/N/W** (in [make_insidekaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_insidekaidan.py))
 
@@ -234,4 +234,26 @@
 
     make_kansito.make_kannsito(mc,sityuublock=param.GOLD_BLOCK,kahenblock=param.SEA_LANTERN_BLOCK,zyouhenblock=param.GLASS)
     #　↑　初期設定の位置と高さの、支柱のような部分が金ブロックで人がいそうな場所の下半分がシーランタンブロック、上半分がガラスブロックで構成されていいる監視塔を作成する
+    ~~~
+- 6.　**make_honto** (in [make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py))
+
+    ここでは本棟を作成することが出来ます。make_hontoの()の中には`x`,`y`,`z`,`tyusinblock`の四つがあると思いますが、`x`,`z`は本棟のスケール（幅）、`y`は高さ、`tyusinblock`は本棟のガラスに囲まれているブロック（初期だと金ブロック）をコントロールすることが出来ます。
+
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_kansito
+
+    make_kansito.make_honto(mc,)
+    #　↑　初期設定の本棟を作る
+
+    make_kansito.make_honto(mc,x=13,z=13)
+    #　↑　x,z座標ともに-13~13までの幅の本棟を作る
+
+    make_kansito.make_honto(mc,y=100)
+    #　↑　y座標0～100までの高さの本棟を作る
+
+    make_kansito.make_honto(mc,tyusinblock=param.GLASS)
+    #　↑　ガラスに囲まれているブロックがガラス、つまりガラスの本棟を作る
     ~~~
