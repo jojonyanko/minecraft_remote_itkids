@@ -6,9 +6,13 @@
 
 このサイトはMinecraftに[Naohiro2gさん](https://github.com/jojonyanko/minecraft_remote/blob/main/README_ja.md)作のremotecontrollermod-1.16.5_0.05というMODをいれることで、PythonとMinecraftを連結させ、Minecraftの世界を操作できるようにした状態で使うことが出来る物です。こうやって書くと使うまでに随分と複雑なことをしなければならないように感じますが、あなたがやる動作はただ5つ！
 ### 1: Minecraftを購入して、MODを入れることが出来るようにする
-|MODを使えるようにする方法|その方法が通用しなかったら|
-|:--:|:--:|
-|1.Javaをインストールする2.使いたいMinecraftのバージョンと同じバージョンのForgeをインストールする3.Forgeをダブルクリックし起動させ、ダウンロードする4.Minecraftを起動し、|<iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>|
+- MODを使えるようにする方法
+
+1.Javaをインストールする  2.使いたいMinecraftのバージョンと同じバージョンのForgeをインストールする  3.Forgeをダブルクリックし起動させ、ダウンロードする  4.Minecraftを起動し、
+
+- その方法が通用しなかったら
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### 2: remotecontrollermodを入手し、MODフォルダにぶち込む
 |[remotecontrollermod 1.16.5](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3363255)|[remotecontrollermod 1.12.2](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3242375)|
 |:--:|:--:|
