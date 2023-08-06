@@ -8,6 +8,7 @@ import make_kansito
 import make_kaidan
 import make_insidekaidan
 import time
+import math
 
 mc = Minecraft.create(port=param.PORT_MC)
 def make_ALL(mc,x,y,z,make_hontow,make_utikaidann,make_naraku,make_kaidow,make_outkaidan,make_kansitow,make_box,
@@ -75,11 +76,46 @@ def make_BOSS_Head(x=0,y=5,z=0):
     mc.setBlocks(x-4,y-4,z-4,x+4,y+4,z+4,35,0)#四角
     mc.setBlocks(x-3,y-4,z-5,x+3,y+4,z+5,35,0)#前
     mc.setBlocks(x-5,y-4,z-3,x+5,y+4,z+3,35,0)#横
-    mc.setBlocks(x-5,y-3,z-3,x+5,y+3,z+3,35,0)#前
-    mc.setBlocks(x-3,y-3,z-5,x+3,y+3,z+5,35,0)#横
+    mc.setBlocks(x-5,y-3,z-4,x+5,y+3,z+4,35,0)#前
+    mc.setBlocks(x-4,y-3,z-5,x+4,y+3,z+5,35,0)#横
+    mc.setBlocks(x-3,y-5,z-4,x+3,y+5,z+4,35,0)#上
+    mc.setBlocks(x-4,y-5,z-3,x+4,y+5,z+3,35,0)#上
     mc.setBlocks(x-3,y-3,z-3,x+3,y+3,z+3,42)#中心核
     mc.setBlock(x,y,z,param.TNT,1)
+def make_BOSS_Fase(x=0,y=5,z=0):
+    mc.setBlocks(x-6,y-3,z-5,x-6,y+3,z+5,35,7)
+    mc.setBlocks(x-6,y-4,z-6,x-7,y+4,z+6,35,15)
+    mc.setBlocks(x-7,y-3,z-5,x-7,y+3,z+5,0)
 
-mc.setBlocks(-500,0,-500,200,500,500,0)
-make_BOSS_Head(-50,0,-50)
-# make_ALL(mc,-50,0,0,True,True,True,True,True,True,True)
+def make_Cercle_Anime(x=0,y=0,z=0,Scale=10):
+    Cercle_Scale=Scale
+    for i in range(10):
+        Cercle_Scale += 1
+        zx = 0
+        for j in range(0,Cercle_Scale+1):
+            Block_ID = 35
+            mc.setBlock(x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-zx*zx)),Block_ID)
+            mc.setBlock(x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-zx*zx)),Block_ID)
+            mc.setBlock(-x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-zx*zx)),Block_ID)
+            mc.setBlock(-x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-zx*zx)),Block_ID)
+            zx += 1
+        time.sleep(1)
+        zx = 0
+        for j in range(0,Cercle_Scale+1):
+            Block_ID = 0
+            mc.setBlock(x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x)),Block_ID)
+            mc.setBlock(x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x)),Block_ID)
+            mc.setBlock(-x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x)),Block_ID)
+            mc.setBlock(-x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x)),Block_ID)
+            zx += 1
+        
+
+
+
+
+mc.postToChat("Crash PC!")
+mc.setBlocks(-10,-10,-10,10,10,10,0)
+# make_BOSS_Head(0,0,0)
+# make_BOSS_Fase(0,0,0)
+# make_ALL(mc,-100,0,-100,True,True,True,True,True,True,True)
+make_Cercle_Anime(0,0,0)

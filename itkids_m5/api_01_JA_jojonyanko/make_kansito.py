@@ -23,10 +23,9 @@ def make_kannsito(mc, x=28, z=28, y=76, sityuublock=param.GLOWSTONE, kahenblock=
 
 def make_honto(mc,x= 10,y=100,z= 10,tyusinblock=param.GOLD_BLOCK):
     blocktipe_tyuusin = tyusinblock
-
     mc.setBlocks(x,1,z,-x,y,-z,param.GLASS)
     mc.setBlocks(x-1,1,z-1,-(x-1),y-1,-(z-1),blocktipe_tyuusin)
-
+    
 def make_kaidow(mc,x=49,y=1,z=4,y_plas=20,kaidowblock=param.GLASS):
     blocktipe_kaidow=kaidowblock
     for i in range(6):
