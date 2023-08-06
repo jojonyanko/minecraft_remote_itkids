@@ -8,7 +8,7 @@
 ### 1: Minecraftを購入して、MODを入れることが出来るようにする
 |MODを使えるようにする方法|その方法が通用しなかったら|
 |:--:|:--:|
-|||
+|1.Javaをインストールする2.使いたいMinecraftのバージョンと同じバージョンのForgeをインストールする3.Forgeをダブルクリックし起動させ、ダウンロードする4.Minecraftを起動し、|<iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>|
 ### 2: remotecontrollermodを入手し、MODフォルダにぶち込む
 |[remotecontrollermod 1.16.5](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3363255)|[remotecontrollermod 1.12.2](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3242375)|
 |:--:|:--:|
@@ -45,6 +45,7 @@
 
     make_story.story("さようなら！",botton="a")
     #　↑　Aキーが押された後にMinecraftのチャットで「さようなら！」と出る
+    ~~~
 ※別に`botton`の部分は変えなくても自動でZキーが使われるようになっている
 
 - 2.　**storys**:
@@ -57,6 +58,7 @@
     import param_MCJE1122 as param
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_story
+    ~~~
 
     make_story.storys(["チィース！","サイナラ～！"])
     #　↑　ｚキーを2回押すとMinecraftのチャットで最初に「チィース！」、二回目に「サイナラ～！」と出てくる
@@ -68,11 +70,23 @@
 
 [make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py)にざっくりとした物、[make_insidekaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_insidekaidan.py)、[make_kaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kaidan.py)、[make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py)に細かい設定のできるものが追加されています。
 
-- 1.　**make_all**
+- 1.　**make_ALL**　（in [make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py)）
 
-    ここではこの作品で追加された建造物のすべてを一気に作り出すことが出来る。make_allの後に()があり、その中に`x`,`y`,`z`,`make_hontow`,`make_utikaidan`,`make_naraku`,`make_kaidow`,`make_outkaidan`,`make_kansitow`,`make_box`,
+    ここではこの作品で追加された建造物のすべてを一気に作り出すことが出来ます。make_allの後に()があり、その中に`x`,`y`,`z`,`make_hontow`,`make_utikaidan`,`make_naraku`,`make_kaidow`,`make_outkaidan`,`make_kansitow`,`make_box`,
     `Hontow_date=[10,100,10,param.GOLD_BLOCK]`,`Utikaidan_date=[3,1,3,100,6,param.SEA_LANTERN_BLOCK]`,
     `Kaidow_date=[49,1,4,20,param.GLASS]`,`Outkaidan_date=[[48,4],1,[5,45,8,48],param.GLASS]`,
     `Kanshitow_date=[[16,28,28,15],76,[16,28,15,28],["Shityu",param.GLOWSTONE,"Kahen",param.GLOWSTONE,"Zyouhen",param.GLOWSTONE]]`,
-    `Naraku_date=[49,100,49,300]`
+    `Naraku_date=[49,100,49,300]`などなどといろいろなものがありますが、`x`,`y`,`z`はもちろんその建造物の座標を表しており、`make_hontow`~`make_box`まではその建造物を立てるかどうかを`True`と`False`で区別しています。`Hontow_date`~`Naraku_date`まではそれらの建造物のある程度の細かな設定を行うことが出来ますが、一つ一つ説明していると長くなりすぎてしまうので、make_allのコードなどを読んでどこがどこだかを自分で判断してください（つまり上級者向けです）
+
+    使用例：
+    ~~~Python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_all
+
+    make_all.make_ALL(mc,x,y,z,True,True,True,True,True,True,True)
+    #　↑　座標0,0,0のところにすべての建造物を作成する
+
+
 
