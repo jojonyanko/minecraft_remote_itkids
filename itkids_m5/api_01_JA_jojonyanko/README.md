@@ -18,7 +18,9 @@
 
 - その方法が通用しなかったら
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[!["JAVAの暴走をなきものとするMODの入れ方"](/itkids_m5/api_01_JA_jojonyanko/images/MOD.PNG)](https://www.youtube.com/embed/B-ffqFeUJxE)
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/B-ffqFeUJxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 ### 2: remotecontrollermodを入手し、MODフォルダにぶち込む
 |[remotecontrollermod 1.16.5](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3363255)|[remotecontrollermod 1.12.2](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3242375)|
