@@ -8,6 +8,10 @@ import time
 
 mc = Minecraft.create(port=param.PORT_MC)
 
+mc.postToChat("loding")
+
+make_all.make_ALL(mc,0,0,0,True,True,False,True,True,True,False,Hontow_date=[10,100,10,param.AIR],Utikaidann_date=[3,1,3,100,6,param.AIR],Kaidow_date=[49,1,4,20,param.AIR],OutKaidan_date=[[48,4],1,[5,45,8,48],param.AIR],Kanshitow_date=[[16,28,28,15],76,[16,28,15,28],["a",param.AIR,"k",param.AIR,"z",param.AIR]])
+
 mc.postToChat("Please push Z")
 
 make_story.Storys(["???:Hello",
@@ -35,6 +39,7 @@ make_story.Story("thief:By the way, we should level up. Let's go to another towe
 
 mc.player.setPos(-60,51,0,8)
 mc.setBlock(-60,50,0,0)
+time.sleep(1)
 make_all.make_ALL(mc,0,0,0,True,False,True,True,True,False,True)
 make_story.Storys(["This is the next stage's tower.",
                    "It among deas area, but it have loard.",
