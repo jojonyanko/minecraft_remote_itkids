@@ -6,7 +6,7 @@
 |:--:|:--:|:--:|
 |[本編へ移動する前に](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#%E6%9C%AC%E7%B7%A8%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB)|[ストーリー編](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC%E7%B7%A8)|[機能紹介編](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#%E6%A9%9F%E8%83%BD%E7%B4%B9%E4%BB%8B%E7%B7%A8)|
 |1.[MODを入れることが出来るようにする](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#1-minecraft%E3%82%92%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%A6mod%E3%82%92%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E5%87%BA%E6%9D%A5%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)||[チャット機能](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#1-%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E6%A9%9F%E8%83%BD)(story storys)|
-|2.[MODの入手](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#2-remotecontrollermod%E3%82%92%E5%85%A5%E6%89%8B%E3%81%97mod%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%B6%E3%81%A1%E8%BE%BC%E3%82%80)||[謎の施設](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#2-%E8%AC%8E%E3%81%AE%E6%96%BD%E8%A8%AD)(make_ALL make_insidekaidan_S/E/N/W make_outkaidan_ES/SW/WN/NE make_insidekaidan_seihoukei_zyouhen/migi/kahen/hidari make_kannsito make_honto make_kaidow )|
+|2.[MODの入手](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#2-remotecontrollermod%E3%82%92%E5%85%A5%E6%89%8B%E3%81%97mod%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AB%E3%81%B6%E3%81%A1%E8%BE%BC%E3%82%80)||[謎の施設](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#2-%E8%AC%8E%E3%81%AE%E6%96%BD%E8%A8%AD)(make_ALL make_insidekaidan_S/E/N/W make_outkaidan_ES/SW/WN/NE make_insidekaidan_seihoukei_zyouhen/migi/kahen/hidari make_kannsito make_honto make_kaidow make_Cercle, make_Cercle_Anime(Beta and power up version))|
 |3.[プログラムを実行できるアプリの入手](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#3-vscode%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)|||
 |4.[このリポジトリを使えるように](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#4-%E3%81%93%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%81%97%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE%E3%82%92%E3%81%95%E3%81%A3%E3%81%8D%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E3%81%B6%E3%81%A1%E8%BE%BC%E3%82%80vscode%E3%81%AA%E3%82%89clone-git-repositry%E3%81%A8%E3%81%84%E3%81%86%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B)|||
 |5.[最終準備(？)](https://github.com/jojonyanko/minecraft_remote_itkids/tree/main/itkids_m5/api_01_JA_jojonyanko#5minecraft%E3%81%A7%E4%B8%96%E7%95%8C%E3%81%AB%E5%85%A5%E3%81%A3%E3%81%9F%E5%BE%8C%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%81%97%E3%81%9F%E3%82%82%E3%81%AE%E3%82%92%E3%81%B6%E3%81%A1%E8%BE%BC%E3%82%93%E3%81%A0%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E3%81%8Dminecraft%E3%81%A8python%E3%82%92%E6%8E%A5%E7%B6%9A%E3%81%95%E3%81%9B%E3%82%8B)|||
@@ -62,13 +62,15 @@
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_story
 
-    make_story.story("こんにちは！")
+    make_story.Story("こんにちは！")
     #　↑　ｚキーが押された後にMinecraftのチャットで「こんにちは！」と出る
 
-    make_story.story("さようなら！",botton="a")
+    make_story.Story("さようなら！",botton="a")
     #　↑　Aキーが押された後にMinecraftのチャットで「さようなら！」と出る
     ~~~
 ※別に`botton`の部分は変えなくても自動でZキーが使われるようになっている
+
+![使用例](/itkids_m5/api_01_JA_jojonyanko/images/%EF%BD%8Estory.gif)
 
 - 2.　**storys**:
 
@@ -81,10 +83,10 @@
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_story
 
-    make_story.storys(["チィース！","サイナラ～！"])
+    make_story.Storys(["チィース！","サイナラ～！"])
     #　↑　ｚキーを2回押すとMinecraftのチャットで最初に「チィース！」、二回目に「サイナラ～！」と出てくる
 
-    make_story.storys(["ゴッツァンです！","もう一杯ようどすか！？","あいざいました！"],botton="a")
+    make_story.Storys(["ゴッツァンです！","もう一杯ようどすか！？","あいざいました！"],botton="a")
     #　↑　Aキーを2回押すと、Minecraftのチャットで最初に「ゴッツァンです！」、二回目に「もう一杯ようどすか！？」、三回目に「あいざいました！」と出てくる
     ~~~
 
@@ -107,13 +109,13 @@
     mc = mc = Minecraft.create(port=param.PORT_MC)
     import make_all
 
-    make_all.make_ALL(mc,x,y,z,True,True,True,True,True,True,True)
+    make_all.make_ALL(mc,0,0,0,True,True,True,True,True,True,True)
     #　↑　座標0,0,0のところにすべての建造物を作成する
 
-    make_all.make_ALL(mc,x,y,z,True,False,False,False,False,False,False)
+    make_all.make_ALL(mc,0,0,0,True,False,False,False,False,False,False)
     #　↑　座標0,0,0のところに本棟だけを作成する
 
-    make_all.make_ALL(mc,x+10,y,z+10,True,True,True,True,True,True,True)
+    make_all.make_ALL(mc,10,0,10,True,True,True,True,True,True,True)
     #　↑　座標10,0,10のところにすべての建造物を作成する
     ~~~
     ※ちなみに`x`,`y`,`z`を変更した状態で建造物を作成すると、本棟などはバグった物ができるのだが、逆にそちらの方が建造物としてすごい場合が多いので、よかったら自分の気に入ったバグの建造物を見つけてTwitterとかで公開してみたらどうでしょうか？（Xなんてものは知りません）
@@ -171,10 +173,10 @@
     make_kaidan.make_outkaidan_NE(mc,)
     #　↑　初期設定の階段をそれぞれ作成する
 
-    make_kaidan.make_outkaidan_ES(mc,x+10,y,z+10)
-    make_kaidan.make_outkaidan_SW(mc,x+10,y,z+10)
-    make_kaidan.make_outkaidan_WN(mc,x+10,y,z+10)
-    make_kaidan.make_outkaidan_NE(mc,x+10,y,z+10)
+    make_kaidan.make_outkaidan_ES(mc,10,1,10)
+    make_kaidan.make_outkaidan_SW(mc,10,1,10)
+    make_kaidan.make_outkaidan_WN(mc,10,1,10)
+    make_kaidan.make_outkaidan_NE(mc,10,1,10)
     #　↑　座標10,1,10のところに階段を作成する
 
     make_kaidan.make_outkaidan_ES(mc,outkaidanblock=param.GOLD_BLOCK)
@@ -289,10 +291,10 @@
     make_kansito.make_kaidow(mc,y=10)
     #　↑　y座標が10のところに初期設定の街道を作成する
 
-    make_kansito.make_kaidow(mc,x_plas=50)
+    make_kansito.make_kaidow(mc,y_plas=50)
     #　↑　50ごとの間隔をあけて街道が上に複製されていく
 
-    make_kansito.make_kaidow(mc,x_plas=0)
+    make_kansito.make_kaidow(mc,y_plas=0)
     #　↑　街道が一つ（一クロス）作成される
 
     make_kansito.make_kaidow(mc,kaidowblock=param.GOLD_BLOCK)

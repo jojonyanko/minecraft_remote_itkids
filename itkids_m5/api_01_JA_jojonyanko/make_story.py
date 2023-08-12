@@ -38,9 +38,12 @@ def Charenge_thief(Block_ID=14,Around_Block=False,Around_Block_ID=1,Kanshi=False
                 Block_y = y
             if mc.getBlock(0,Block_y,0) == 0 and block_was_breaked == True:
                 break
-        elif (y < -10):
-            Storys(["Oh, are you all right?",
-                    "Please respown and try again!!"])
+        elif (y < -125):
+            mc.postToChat("Oh, are youu all right? (z)")
+            mc.setBlock(-51,99,-51,8)
+            Story("Please respown and try again!!")
+            mc.player.setPos(-51,100,-51)
+            mc.setBlock(-51,99,-51,0)
         if Kanshi == True:
             if(( x and y )or( x and y )or( x and y )or( x and y )):
                 x,y,z = int(x),int(y),int(z)

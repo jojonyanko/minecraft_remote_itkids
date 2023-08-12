@@ -7,7 +7,7 @@ import param_MCJE1122 as param
 import make_kansito 
 import make_kaidan
 import make_insidekaidan
-import time
+from time import sleep
 import math
 
 mc = Minecraft.create(port=param.PORT_MC)
@@ -70,7 +70,7 @@ def make_tsuisekidan(dan_x,dan_y,dan_z):
         else:
             dan_x = dan_x
         mc.setBlock(dan_x,dan_y,dan_z,46,0)
-        time.sleep(0.5)
+        sleep(0.5)
 
 def make_BOSS_Head(x=0,y=5,z=0):
     mc.setBlocks(x-4,y-4,z-4,x+4,y+4,z+4,35,0)#四角
@@ -87,6 +87,16 @@ def make_BOSS_Fase(x=0,y=5,z=0):
     mc.setBlocks(x-6,y-4,z-6,x-7,y+4,z+6,35,15)
     mc.setBlocks(x-7,y-3,z-5,x-7,y+3,z+5,0)
 
+def make_Cercle(x=0,y=0,z=0,Scale=10,Block_ID=35):
+    change_x = 0
+    for j in range(0,(Scale*100)):
+        Block_ID = Block_ID
+        mc.setBlock(int(change_x)+x,y,int(math.sqrt(Scale*Scale-change_x*change_x))+z,Block_ID)
+        mc.setBlock(int(change_x)+x,y,-int(math.sqrt(Scale*Scale-change_x*change_x))+z,Block_ID)
+        mc.setBlock(-int(change_x)+x,y,int(math.sqrt(Scale*Scale-change_x*change_x))+z,Block_ID)
+        mc.setBlock(-int(change_x)+x,y,-int(math.sqrt(Scale*Scale-change_x*change_x))+z,Block_ID)
+        change_x += 0.01
+
 def make_Cercle_Anime(x=0,y=0,z=0,Scale=10):
     Cercle_Scale=0
     x = 0
@@ -100,7 +110,7 @@ def make_Cercle_Anime(x=0,y=0,z=0,Scale=10):
             mc.setBlock(-int(x),y,int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x))+z,Block_ID)
             mc.setBlock(-int(x),y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x))+z,Block_ID)
             x += 0.01
-        time.sleep(0.01)
+        sleep(0.01)
         x = 0
         for j in range(0,(Cercle_Scale*100)):
             Block_ID = 0
@@ -109,16 +119,47 @@ def make_Cercle_Anime(x=0,y=0,z=0,Scale=10):
             mc.setBlock(-int(x),y,int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x))+z,Block_ID)
             mc.setBlock(-int(x),y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-x*x))+z,Block_ID)
             x += 0.01
-        time.sleep(0.01)
+        sleep(0.01)
+
+def make_Cercle_Anime_powerup(x=0,y=0,z=0,Scale=10,time=0.01):
+    Cercle_Scale=0
+    change_x = 0
+    zx= 0
+    time = int(time)
+    for i in range(Scale):
+        Cercle_Scale += 1
+        change_x = 0
+        zx = 0
+        # for j in range(0,(Cercle_Scale*100)):
+        #     Block_ID = 35
+        #     mc.setBlock(int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(int(change_x)+x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(-int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(-int(change_x)+x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     change_x += 0.01
+        make_Cercle(x,y,z,Scale=Cercle_Scale,Block_ID=35)
+        sleep(time)
+        change_x = 0
+        # for j in range(0,(Cercle_Scale*100)):
+        #     Block_ID = 0
+        #     mc.setBlock(int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(int(change_x)+x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(-int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     mc.setBlock(-int(change_x)+x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
+        #     change_x += 0.01
+        make_Cercle(x,y,z,Scale=Cercle_Scale,Block_ID=0)
+        sleep(time)
         
 
 
 
 
-mc.postToChat("Crash PC!")
-mc.setBlocks(-10,-10,-10,10,10,10,0)
-mc.player.setPos(0,-125,0)
+# mc.postToChat("Crash PC!")
+# mc.player.setPos(0,0,0)
+# mc.setBlocks(-10,-10,-10,10,10,10,0)
+# sleep(1)
 # make_BOSS_Head(0,0,0)
 # make_BOSS_Fase(0,0,0)
 # make_ALL(mc,-100,0,-100,True,True,True,True,True,True,True)
-make_Cercle_Anime(0,0,0)
+# make_Cercle_Anime_powerup(-10,20,-10,10,0.05)
+# make_Cercle(10,10,-10,10)
