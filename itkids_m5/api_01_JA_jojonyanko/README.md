@@ -71,6 +71,7 @@
 ※別に`botton`の部分は変えなくても自動でZキーが使われるようになっている
 
 ![使用例](/itkids_m5/api_01_JA_jojonyanko/images/%EF%BD%8Estory.gif)
+↑　適当に作った使用例の動画です。
 
 - 2.　**storys**:
 
