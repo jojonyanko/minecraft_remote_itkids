@@ -92,6 +92,8 @@
     #　↑　Aキーを2回押すと、Minecraftのチャットで最初に「ゴッツァンです！」、二回目に「もう一杯ようどすか！？」、三回目に「あいざいました！」と出てくる
     ~~~
 
+    ![使用例](/itkids_m5/api_01_JA_jojonyanko/images/%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B32.gif)
+
 ### 2. 謎の施設
 
 [make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py)にざっくりとした物、[make_insidekaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_insidekaidan.py)、[make_kaidan](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kaidan.py)、[make_kansito](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_kansito.py)に細かい設定のできるものが追加されています。
