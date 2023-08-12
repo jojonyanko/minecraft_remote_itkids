@@ -226,8 +226,8 @@ def nine_make_kaidow(select):
 # nine_make_kaidow(select=5)
 # nine_make_kaidow(select=6)
 
-# make_story.Storys(["Hello","Hi","Good morning","How are you?"])
+make_story.Storys(["Hello","Hi","Good morning","How aｚre you?"])
 
-# make_story.Storys(["Goodbye","Thank you","See you again"],"a")
+make_story.Storys(["Goodbye","Thank you","See you again"],"a")
 
-make_story.Story("You can try this program!","a")
+# make_story.Story("You can try this program!","a")
