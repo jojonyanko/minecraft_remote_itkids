@@ -72,16 +72,16 @@ def make_tsuisekidan(dan_x,dan_y,dan_z):
         mc.setBlock(dan_x,dan_y,dan_z,46,0)
         sleep(0.5)
 
-def make_BOSS_Head(x=0,y=5,z=0):
-    mc.setBlocks(x-4,y-4,z-4,x+4,y+4,z+4,35,0)#四角
-    mc.setBlocks(x-3,y-4,z-5,x+3,y+4,z+5,35,0)#前
-    mc.setBlocks(x-5,y-4,z-3,x+5,y+4,z+3,35,0)#横
-    mc.setBlocks(x-5,y-3,z-4,x+5,y+3,z+4,35,0)#前
-    mc.setBlocks(x-4,y-3,z-5,x+4,y+3,z+5,35,0)#横
-    mc.setBlocks(x-3,y-5,z-4,x+3,y+5,z+4,35,0)#上
-    mc.setBlocks(x-4,y-5,z-3,x+4,y+5,z+3,35,0)#上
-    mc.setBlocks(x-3,y-3,z-3,x+3,y+3,z+3,42)#中心核
-    mc.setBlock(x,y,z,param.TNT,1)
+def make_BOSS_Head(x=0,y=5,z=0,Block_ID=[["aroundBlock",35,0],["insideBlock",42],["Hart",param.TNT,1]]):
+    mc.setBlocks(x-4,y-4,z-4,x+4,y+4,z+4,Block_ID[0][1],Block_ID[0][2])#四角
+    mc.setBlocks(x-3,y-4,z-5,x+3,y+4,z+5,Block_ID[0][1],Block_ID[0][2])#前
+    mc.setBlocks(x-5,y-4,z-3,x+5,y+4,z+3,Block_ID[0][1],Block_ID[0][2])#横
+    mc.setBlocks(x-5,y-3,z-4,x+5,y+3,z+4,Block_ID[0][1],Block_ID[0][2])#前
+    mc.setBlocks(x-4,y-3,z-5,x+4,y+3,z+5,Block_ID[0][1],Block_ID[0][2])#横
+    mc.setBlocks(x-3,y-5,z-4,x+3,y+5,z+4,Block_ID[0][1],Block_ID[0][2])#上
+    mc.setBlocks(x-4,y-5,z-3,x+4,y+5,z+3,Block_ID[0][1],Block_ID[0][2])#上
+    mc.setBlocks(x-3,y-3,z-3,x+3,y+3,z+3,Block_ID[1][1])#中心核
+    mc.setBlock(x,y,z,Block_ID[2][1],Block_ID[2][2])
 def make_BOSS_Fase(x=0,y=5,z=0):
     mc.setBlocks(x-6,y-3,z-5,x-6,y+3,z+5,35,7)
     mc.setBlocks(x-6,y-4,z-6,x-7,y+4,z+6,35,15)
