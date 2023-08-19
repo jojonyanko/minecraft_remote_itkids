@@ -50,6 +50,8 @@
 
 バグが発生中です。もうしばらく（数日）お待ちください。
 
+**[ミニゲーム](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/Minigame.py)**(代わりにこれでも遊んでおいてください)
+
 ## 機能紹介編
 ### 1. チャット機能
 [make_story](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_story.py)という部分に追加されており、二つの機能があります

@@ -6,23 +6,23 @@ import make_story
 from time import sleep
 import random
 
-make_story.Storys(["You really want to do this game?",
-                   "I think it's not good idea.",
-                   "You can't do this! You will die.",
-                   "....",
-                   "Ok...",
-                   "Let's fight"])
+# make_story.Storys(["You really want to do this game?",
+#                    "I think it's not good idea.",
+#                    "You can't do this! You will die.",
+#                    "....",
+#                    "Ok...",
+#                    "Let's fight"])
 
 # 黒曜石　49
-playerx,playery,playerz=mc.player.getPos
+playerx,playery,playerz=mc.player.getPos()
 
 def move_block(x,y,z,Scale,Block_ID,time,up=True):
     mc.setBlock(x,y,z,Block_ID)
     block_position = 1
     sleep(time)
     for i in range(Scale//2):
-        mc.setBlocks(x+block_position,y,z,Block_ID,x+block_position,y+(Scale//2),z,Block_ID,param.AIR)
-        mc.setBlocks(x-block_position,y,z,Block_ID,x-block_position,y+(Scale//2),z,Block_ID,param.AIR)
+        mc.setBlocks(x+block_position,y,z,x+block_position,y+(Scale//2),z,param.AIR)
+        mc.setBlocks(x-block_position,y,z,x-block_position,y+(Scale//2),z,param.AIR)
         mc.setBlock(x+block_position,y,z,Block_ID)
         mc.setBlock(x-block_position,y,z,Block_ID)
         block_position += 1
@@ -38,28 +38,29 @@ def move_block(x,y,z,Scale,Block_ID,time,up=True):
 def make_stage(x=playerx,y=playery,z=playerz,Block_ID=49):
     block_position=0
     for i in range(25):
-        move_block(x=x,y=y,z=z+block_position,Scale=50,Block_ID=Block_ID,time=0.1)
-        move_block(x=x,y=y,z=z-block_position,Scale=50,Block_ID=Block_ID,time=0.1)
+        move_block(x=x,y=y,z=z+block_position,Scale=50,Block_ID=Block_ID,time=0.001)
+        move_block(x=x,y=y,z=z-block_position,Scale=50,Block_ID=Block_ID,time=0.001)
         if i == 24:
             block_y = 1
             for j in range(25):
-                move_block(x=x,y=y+block_y,z=z+block_position,Scale=50,Block_ID=Block_ID,time=0.1,up=False)
-                move_block(x=x,y=y+block_y,z=z-block_position,Scale=50,Block_ID=Block_ID,time=0.1,up=False)
+                move_block(x=x,y=y+block_y,z=z+block_position,Scale=50,Block_ID=Block_ID,time=0.001,up=False)
+                move_block(x=x,y=y+block_y,z=z-block_position,Scale=50,Block_ID=Block_ID,time=0.001,up=False)
                 block_y += 1
-                sleep(0.1)
+                sleep(0.5)
         block_position += 1
         sleep(0.1)
 
 make_stage()
-block_y = playery + 52
+sleep(1)
+block_y = playery + 56
 for i in range(50):
-    make_all.make_BOSS_Head(playerx+15,block_y,playerz+15)
+    make_all.make_BOSS_Head(playerx+10,block_y,playerz+10)
     if(i != 49):
-        sleep(0.1)
-        make_all.make_BOSS_Head(playerx+15,block_y,playerz+15,Block_ID=[["a",0,0],["i",0],["h",0,0]])
-    playery -= 1
+        sleep(0.25)
+        make_all.make_BOSS_Head(playerx+10,block_y,playerz+10,Block_ID=[["a",0,0],["i",0],["h",0,0]])
+    block_y -= 1
 
-make_all.make_Cercle_Anime_powerup(playerx+15,playery+1,playerz+15)
+make_all.make_Cercle_Anime_powerup(playerx+10,playery+1,playerz+10)
 
 make_story.Story("Keep moving or fell from this world.")
 
@@ -71,55 +72,86 @@ try_again = 1
 TNT_times=0
 TNT_positions = []
 Breaked_Fase=[]
-Look_blockx=playerx+20
+Look_blockx=playerx+17
 Look_blocky=playery+7
-Look_blockz=playerz+20
+Look_blockz=playerz+17
+TNTx=0
+TNTy=0
+TNTz=0
+TNT_count=0
+Die_counter=0
 while True:
-    sleep(0.1)
-    Time+=0.1
-    if(Time % 3 == 0):
+    TNT_positions=[]
+    Breaked_Fase=[]
+    sleep(1)
+    Time+=1
+    if Time % 5 == 0:
         playerx,playery,playerz = mc.player.getPos()
-        mc.setBlocks(playerx,-125,playerz,playerx,125,playerz,40)
-    if(Time % 10):
+        mc.setBlocks(playerx,playery-125,playerz,playerx,playery+125,playerz,0)
+    if Time % 50 == 0:
         mc.postToChat("Werning werning")
         sleep(0.5)
         mc.postToChat("TNT time")
-        Look_blockx,Look_blocky,Look_blockz = randomx+20,randomy+7,randomz+20
-        for i in range(125):
+        Look_blockx,Look_blocky,Look_blockz = randomx+17,randomy+7,randomz+17
+        for i in range(343):
             if mc.getBlock(Look_blockx,Look_blocky,Look_blockz) == 0:
-                Breaked_Fase += [Look_blockx,Look_blocky,Look_blockz]
-            if i % 4 != 0:
+                Breaked_Fase.append([Look_blockx,Look_blocky,Look_blockz])
+            if i % 6 != 0:
                 Look_blockx -= 1
-            elif i % 4 == 0:
-                if i % 20 != 0:
+            elif i % 6 == 0:
+                if i % 49 != 0:
                     Look_blockz -= 1
                     Look_blockx = randomx + 20
                 else:
                     Look_blocky -= 1
                     Look_blockx = randomx + 20
                     Look_blockz = randomz + 20
+        print(Breaked_Fase)
         TNT_time=True
         TNT_times += 1
+        TNT_count=0
         for i in range(5 + (TNT_times * 5)):
-            while try_again == 0:
-                x,y,z=random.randrange(randomx-50,randomx+50),randomy+1,random.randrange(randomz-50,randomz+50)
-                if mc.getBlock(x,y,z) == param.TNT:
+            while try_again != 0:
+                TNTx=random.randint(int(randomx)-24,int(randomx)+24)
+                TNTy=randomy+1
+                TNTz=random.randint(int(randomz)-24,int(randomz)+24)
+                if mc.getBlock(TNTx,TNTy,TNTz) == param.TNT:
                     try_again=1
-            mc.setBlock(x,y,z,param.TNT,1)
-            TNT_positions += [x,y,z]
-        make_all.make_BOSS_Head(randomx+15,randomy+2,randomz+15,Block_ID=[["a",49,0],["i",49],["h",49,1]])
-        Lost_TNTs=5+(TNT_times * 5)
+                else:
+                    try_again=0
+            try_again=1
+            mc.setBlock(TNTx,TNTy,TNTz,param.TNT,1)
+            TNT_count += 1
+            TNT_positions.append([TNTx,TNTy,TNTz])
+            sleep(0.1)
+        print(TNT_positions)
+        print(TNT_count)
+        make_all.make_BOSS_Head(randomx+10,randomy+7,randomz+10,Block_ID=[["a",49,0],["i",49],["h",49,1]])
+        Lost_TNTs=TNT_count
+        sleep(0.1)
         while True:
+            Returned=0
+            Lost_TNTs=TNT_count
             for i in range(5 + (TNT_times * 5)):
-                if mc.getBlock(TNT_positions[i][0],TNT_positions[i][1],TNT_positions[i][2]) == 0:
+                Returned=i
+                TNT_position_x,TNT_position_y,TNT_position_z=TNT_positions[Returned][0],TNT_positions[Returned][1],TNT_positions[Returned][2]
+                if mc.getBlock(TNT_position_x,TNT_position_y,TNT_position_z) == 0:
                     Lost_TNTs -= 1
             if Lost_TNTs == 0:
-                make_all.make_BOSS_Head(randomx+15,randomy+2,randomz+15)
-                for i in len(Breaked_Fase):
-                    mc.setBlock(Breaked_Fase[i][0],Breaked_Fase[i][1],Breaked_Fase[i][2],0)
+                make_all.make_BOSS_Head(randomx+10,randomy+7,randomz+10)
+                Returned=0
+                for i in range(len(Breaked_Fase)):
+                    Returned = i
+                    Breaked_Fase_x,Breaked_Fase_y,Breaked_Fase_z=Breaked_Fase[Returned][0],Breaked_Fase[Returned][1],Breaked_Fase[Returned][2]
+                    mc.setBlock(Breaked_Fase_x,Breaked_Fase_y,Breaked_Fase_z,0)
                 break
-    if mc.getBlock(randomx+15,randomy+2,randomz+15) == 0:
+    if mc.getBlock(randomx+10,randomy+7,randomz+10) == 0:
         break
-make_stage(x=randomx,y=randomy,z=randomz,Block_ID=0)
+    print(Time)
+    if mc.player.getPos(y) <= randomy-145:
+        Die_counter += 1
+        mc.player.setPos(randomx,randomy+1,randomz)
+mc.setBlocks(randomx+8,randomy+5,randomz+8,randomx+12,randomy+9,randomz+12,param.TNT)
 sleep(1)
-mc.postToChat("Your clear time is " + Time + " seconds")
+make_stage(x=randomx,y=randomy,z=randomz,Block_ID=0)
+mc.postToChat("Your clear time is " + str(Time) + " seconds. Die:" + str(Die_counter))
