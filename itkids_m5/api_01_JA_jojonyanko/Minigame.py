@@ -6,12 +6,12 @@ import make_story
 from time import sleep
 import random
 
-# make_story.Storys(["You really want to do this game?",
-#                    "I think it's not good idea.",
-#                    "You can't do this! You will die.",
-#                    "....",
-#                    "Ok...",
-#                    "Let's fight"])
+make_story.Storys(["You really want to do this game?",
+                   "I think it's not good idea.",
+                   "You can't do this! You will die.",
+                   "....",
+                   "Ok...",
+                   "Let's fight"])
 
 # 黒曜石　49
 playerx,playery,playerz=mc.player.getPos()
@@ -62,7 +62,8 @@ for i in range(50):
 
 make_all.make_Cercle_Anime_powerup(playerx+10,playery+1,playerz+10)
 
-make_story.Story("Keep moving or fell from this world.")
+sleep(0.25)
+mc.postToChat("Keep moving or fell from this world.")
 
 Time=0
 randomx=playerx
