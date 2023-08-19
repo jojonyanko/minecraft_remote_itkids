@@ -1,5 +1,7 @@
 # <<Minecraftで学ぶ!!>>　財宝の奪い方　(ストーリーあり‼)
 
+※ストーリーはバグが発生しているため、現在は使用不可です
+
 やぁみんな、みんなは小さいころには盗賊とか怪盗とかにあこがれたことはないかい？現実ではできないとか、なんか楽しそうとかの理由で憧れる人も多いよね。そんないい歳になっても盗賊になりたい君へ‼現実でできないならMinecraftでやってしまえばいいんだ。**ないものは作るしかないからね**
 
 |目次|||
@@ -45,6 +47,8 @@
 また、本来は僕が作った[MY_REAL_API](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/MY_REAL_API.py)という物がこの作品のメインとなるものだけど、せっかくこのリポジトリをクローンして、君たちもプログラムをここで書くことが出来るので、この作品でできる機能も紹介するよ。
 
 ## ストーリー編
+
+バグが発生中です。もうしばらく（数日）お待ちください。
 
 ## 機能紹介編
 ### 1. チャット機能
@@ -305,4 +309,54 @@
 
     make_kansito.make_kaidow(mc,kaidowblock=param.GOLD_BLOCK)
     #　↑　金ブロックで構成されている初期設定の街道ができる
+    ~~~
+
+- 8.　**make_Cercle** (in [make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py))
+
+    ここでは円を作成することが出来ます。make_Cercleの()の中に`x`,`y`,`z`,`Scale`,`Block_ID`の四つがあると思いますが、`x`,`y`,`z`は円を作成する座標、`Scale`は円の半径、`Block_ID`は円を構成するブロックをコントロールすることが出来ます。
+
+    使用例：
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_all
+
+    make_all.make_Sercle()
+    # ↑　初期状態の円を作り出します
+
+    make_all.make_Sercle(5,10,5)
+    # ↑　初期状態の円を座標(5,10,5)のところに作りだします
+
+    make_all.make_Sercle(x,y,z,Scale=5)
+    # ↑　半径が5ブロックの円を作り出します
+
+    make_all.make_Sercle(x,y,z,Scale,Block_ID=param.GOLD_BLOCK)
+    # ↑　金ブロックでできた円を作成します
+    ~~~
+
+- 9.　**make_Cercle_Anime_powerup** (in [make_all](https://github.com/jojonyanko/minecraft_remote_itkids/blob/main/itkids_m5/api_01_JA_jojonyanko/make_all.py))
+
+    ここでは波紋が広がるように、円が広がっていくアニメーションを作ることが出来ます。make_Cercle_Animeというのもあるのですが、こちらのはy座標とx座標しか決めることが出来ないので、こちらの方がより応用度が高いです。make_Cercle_Anime_powerupの()の中に`x`,`y`,`z`,`Scale`,`time`,`Block_ID`の五つがあると思いますが、`x`,`y`,`z`は毎度おなじみ座標を、`Scale`は最終的な円の半径を、`time`は円とその次の円を作成するまでの時間を、`Block_ID`は円を構成するブロックをコントロールすることが出来ます。
+
+    ~~~python
+    from mcpi.minecraft import Minecraft
+    import param_MCJE1122 as param
+    mc = mc = Minecraft.create(port=param.PORT_MC)
+    import make_all
+
+    make_all.make_Sercle_Anime_powerup()
+    #　↑　初期の波紋のアニメーションを作成します
+
+    make_all.make_Sercle_Anime_powerup(5,10,5)
+    #　↑　座標(5,10,5)のところに波紋のアニメーションを作成します
+
+    make_all.make_Sercle_Anime_powerup(x,y,z,Scale=5)
+    # ↑　半径が1ブロックの円から、半径が5ブロックの円まで移り変わるアニメーションを作成します
+
+    make_all.make_Sercle_Anime_powerup(x,y,z,Scale,time=1)
+    # ↑　一つの円を一秒間表示してから次の円を作成します（もちろん次の円も一秒間表示されます）
+
+    make_all.make_Sercle_Anime_powerup(x,y,z,Scale,time,Block_ID=param.GOLD_BLOCK)
+    # ↑　金ブロックで作成された円でアニメーションを作成します
     ~~~

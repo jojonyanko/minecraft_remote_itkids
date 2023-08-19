@@ -121,15 +121,15 @@ def make_Cercle_Anime(x=0,y=0,z=0,Scale=10):
             x += 0.01
         sleep(0.01)
 
-def make_Cercle_Anime_powerup(x=0,y=0,z=0,Scale=10,time=0.01):
+def make_Cercle_Anime_powerup(x=0,y=0,z=0,Scale=10,time=0.01,Block_ID=35):
     Cercle_Scale=0
     change_x = 0
-    zx= 0
+    # zx= 0
     time = int(time)
     for i in range(Scale):
         Cercle_Scale += 1
         change_x = 0
-        zx = 0
+        # zx = 0
         # for j in range(0,(Cercle_Scale*100)):
         #     Block_ID = 35
         #     mc.setBlock(int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
@@ -137,7 +137,7 @@ def make_Cercle_Anime_powerup(x=0,y=0,z=0,Scale=10,time=0.01):
         #     mc.setBlock(-int(change_x)+x,y,int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
         #     mc.setBlock(-int(change_x)+x,y,-int(math.sqrt(Cercle_Scale*Cercle_Scale-change_x*change_x))+z,Block_ID)
         #     change_x += 0.01
-        make_Cercle(x,y,z,Scale=Cercle_Scale,Block_ID=35)
+        make_Cercle(x,y,z,Scale=Cercle_Scale,Block_ID=Block_ID)
         sleep(time)
         change_x = 0
         # for j in range(0,(Cercle_Scale*100)):
